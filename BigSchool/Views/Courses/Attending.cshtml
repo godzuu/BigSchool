@@ -1,0 +1,41 @@
+﻿@model BigSchool.ViewModels.CourseViewModel
+@{
+    ViewBag.Title = "Attending";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Attending</h2>
+
+<div class="row">
+    <ul class="test">
+        @foreach (var course in Model.UpcomingCourses)
+        {
+
+
+            <li>
+                <div class="date">
+                    <div class="month">
+                        @course.Datetime.ToString("MM")
+                    </div>
+                    <div class="day">
+                        @course.Datetime.ToString("dd")
+                    </div>
+                </div>
+                <div class="details">
+                    <span class="lecturer">
+                        @course.Lecturer.Name
+
+                        <button class="btn btn-link btn-sm js-toggle-attendance" @course.LecturerId>Follow</button>
+                    </span>
+                    <span class="category">
+                        @course.Category.Name
+
+                    </span>
+                    <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going</button>
+                </div>
+            </li>
+        }
+
+    </ul>
+
+</div>

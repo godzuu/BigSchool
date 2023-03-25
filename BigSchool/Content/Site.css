@@ -4,10 +4,10 @@
     padding-left: 15px;
     padding-right: 15px;
 }
-.navbar-inverse{
-    background-color:red;
-    border-color:white;
-
+.navbar-inverse {
+    background-color: slateblue;
+    border-bottom: solid 1px #777;
+    box-shadow: inherit;
 }
 .navbar-inverse.navbar-nav{
     color:white;
@@ -16,32 +16,29 @@
     color:white;
 }
 .test{list-style:none;}
-.test > li {
-    position: relative;
-    margin-bottom: 30px
-}
-.test li .date {
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    padding: 20px;
-    width: 60px;
-    height: 80px;
-    text-align:center;
-    background-color: red ;
-    color: white;
+    .test > li {
+        position: relative;
+        margin-bottom: 30px;
+    }
 
-
-}
-.test li .details{
-    position:absolute;
-    top:0;
-    padding-top: 0em;
-    left:70px;
-}
+    .test li .date {
+        text-align: center;
+        background-color: saddlebrown;
+        color: aliceblue;
+        width: 60px;
+        border-radius: 8px;
+    }
+    .test li .details {
+        position: absolute;
+        top: 0;
+        padding-top: 0em;
+        left: 70px;
+    }
 
 li {
   
 }
+
 
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -59,4 +56,12 @@ textarea {
 }
 .nav navbar-nav navbar-right {
    
+}
+.course >li .action{
+    display:none;
+    left:70px;
+    position:absolute;
+}
+.course >li:hover.action{
+    display:block;
 }
